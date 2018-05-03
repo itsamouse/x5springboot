@@ -1,0 +1,29 @@
+server:
+  port: 8888
+mybatis:
+  type-aliases-package: net.jingbo.x5springboot.api.entity
+#ec:
+#  datasource:
+#    url: jdbc:oracle:thin:@10.254.2.71:1521/ECPPROD
+#    username: ecp
+#    password: Ecp0fJ1ngb0
+#    driverClassName: oracle.jdbc.OracleDriver
+#erp:
+#  datasource:
+#    url: jdbc:oracle:thin:@10.189.1.10:1521/PROD
+#    username: apps
+#    password: j1ngb0
+#    driverClassName: oracle.jdbc.OracleDriver
+
+ec:
+  datasource:
+    url: jdbc:oracle:thin:@10.254.25.37:1521/ecptest
+    username: ecp
+    password: ecp
+    driverClassName: oracle.jdbc.OracleDriver
+erp:
+  datasource:
+    url: jdbc:oracle:thin:@10.254.25.38:1522:JB001
+    username: apps
+    password: apps01
+    driverClassName: oracle.jdbc.OracleDriver

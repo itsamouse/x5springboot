@@ -1,0 +1,109 @@
+/**
+	@name com.justep.baas..data.DataUtils
+	@model Baas
+	@category java
+	@class 
+	@description 
+*/
+
+/**
+	@name com.justep.baas.Utils.queryData
+	@function
+	@description SQL数据查询，按ResultSet的列定义转换并返回Table，支持分页
+	@param conn {Connection}
+	@param sql {String}
+	@param params {List<Object>} SQL中问号对应的参数值，按顺序匹配
+	@param columns {Object} 列定义,支持string和JSON两种格式
+	@param offset {Integer} 偏移行，null则不分页
+	@param limit {Integer} 行数，null则不分页
+	@return {Table}
+	@throws SQLException
+*/
+
+/**
+	@name com.justep.baas.Utils.queryData
+	@function
+	@description 单表数据查询，按ResultSet的列定义转换返回Table，支持分页，当偏移行等于零时自动返回总行数
+	@param conn {Connection}
+	@param tableName {String} 表名
+	@param columns {Object} 列定义,支持string和JSON两种格式
+	@param filters {List<String>} 过滤条件列表
+	@param orderBy {String} SQL的orderBy部分
+	@param params {List<Object>} SQL中问号对应的参数值列表
+	@param offset {Integer} 偏移行
+	@param limit {Integer} 行数
+	@return {Table}
+	@throws SQLException
+*/
+
+/**
+	@name com.justep.baas.Utils.getValueBySQL
+	@function
+	@description 执行SQL查询，返回第一行第一列的值
+	@param conn {Connection}
+	@param sql {String}
+	@param params {List<Object>} SQL中问号对应的参数值，按顺序匹配
+	@return {Object}
+	@throws SQLException
+*/
+
+/**
+	@name com.justep.baas.Utils.saveData
+	@function
+	@description 保存Table数据，自动产生并执行基于where key规则的增删改SQL语句
+	@param conn {Connection}
+	@param table {Table}
+	@param tableName {String} 数据库表名
+	@throws SQLException
+*/
+
+/**
+	@name com.justep.baas.Utils.saveData
+	@function
+	@description 保存Table数据，并指定列范围
+	@param conn {Connection}
+	@param table {Table}
+	@param tableName {String} 数据库表名
+	@param columns {String} 列范围 ","分隔的字符串
+	@throws SQLException
+*/
+
+/**
+	@name com.justep.baas.Utils.saveData
+	@function
+	@description 保存Table数据，并指定列范围
+	@param conn {Connection}
+	@param table {Table}
+	@param tableName {String} 数据库表名
+	@param columns {List<String>} 列范围
+	@throws SQLException
+*/
+
+/**
+	@name com.justep.baas.Utils.arrayJoin
+	@function
+	@description 将一个数组连接为格式化字符串
+	@param objects 对象数组
+	@param format 对数组元素的格式化，例如：'%s'为每个数组元素增加单引号、(%s = ?)将每个数组元素格式化为括号中等于问号
+	@param separator 分隔符，例如：,、OR、AND
+	@return {String}
+*/
+
+/**
+	@name com.justep.baas.Utils.writeJsonToResponse
+	@function
+	@description Response输出JSON
+	@param response {ServletResponse}
+	@param json {JSONObject}
+	@throws IOException
+*/
+
+/**
+	@name com.justep.baas.Utils.writeTableToResponse
+	@function
+	@description Response输出Table
+	@param response {ServletResponse}
+	@param table {Table}
+	@throws IOException
+*/
+	
