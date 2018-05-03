@@ -8,4 +8,4 @@ wex5后端，使用springboot替换baas服务
   * 原baas中自定义baas，使用mybatis自定义的interceptor，定制CURD的各项操作语义
   * 数据源使用druid，去除ActionContext（debug代码后发现只提供connection，未发现其他作用）。数据源一律使用@Autowired自动注入
 
-# 涉及到UIServer中的配置。配置截图单独写博客作为配置教程
+## 涉及到UIServer中的配置。配置截图单独写博客作为配置教程
