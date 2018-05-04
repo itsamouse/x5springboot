@@ -12,6 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletInputStream;
@@ -28,6 +29,7 @@ import java.util.List;
  * Created by Administrator on 2018-4-26.
  */
 @Controller
+@RequestMapping("/ecptest/ecp_test_service")
 public class BaasController {
 
     private final Logger logger= LoggerFactory.getLogger(getClass());
@@ -41,11 +43,10 @@ public class BaasController {
     public static final String REQUEST = "request";
     public static final String RESPONSE = "response";
 
-    @PostMapping("/ecptest/ecp_test_service/*")
+    @PostMapping(value={"/query_std_*","/save_std_*"})
     public void service(ServletRequest request, ServletResponse response) throws ServletException {
         HttpServletRequest reg = (HttpServletRequest)request;
         HttpServletResponse resp = (HttpServletResponse)response;
-
         execService(reg, resp);
     }
 
