@@ -195,7 +195,7 @@ public class CRUD {
 
 		Connection conn = staticDataSource.getConnection();
 		try {
-//			conn.setAutoCommit(true);
+//			conn.setAutoCommit(false);
 			if (tables != null && tables.size() > 0) {
 				for (Object jsonTable : tables) {
 					Table table = Transform.jsonToTable((JSONObject) jsonTable);
