@@ -10,4 +10,6 @@ public interface EcpDao {
     Date queryDate();
 
     Map queryX5TableNeedCancelOds();
+
+    void doCancelOdsProcedure(Map map);
 }

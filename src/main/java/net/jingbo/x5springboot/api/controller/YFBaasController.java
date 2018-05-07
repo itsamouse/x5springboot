@@ -18,12 +18,10 @@ import javax.servlet.http.HttpServletResponse;
  * Created by Administrator on 2018-4-26.
  */
 @Controller
-@RequestMapping("/ecptest/ecp_test_service")
-public class BaasController {
+@RequestMapping("/yfecp/yfecp_service")
+public class YFBaasController {
 
     private final Logger logger= LoggerFactory.getLogger(getClass());
-
-    private static final long serialVersionUID = -5873620616781916663L;
 
     @Autowired
     BaasService baasService;
